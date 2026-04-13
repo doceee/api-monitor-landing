@@ -101,7 +101,7 @@
 							:class="
 								feat.included
 									? 'text-[#94a3b8]'
-									: 'text-[#374151]'
+									: 'text-[#6b7f95]'
 							"
 						>
 							<span
@@ -109,7 +109,7 @@
 								:class="
 									feat.included
 										? 'text-[#22c55e]'
-										: 'text-[#374151]'
+										: 'text-[#6b7f95]'
 								"
 							>
 								{{ feat.included ? '✓' : '–' }}

@@ -2,6 +2,12 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/eslint'],
 
+	vite: {
+		build: {
+			cssCodeSplit: false,
+		},
+	},
+
 	app: {
 		head: {
 			htmlAttrs: { lang: 'en' },

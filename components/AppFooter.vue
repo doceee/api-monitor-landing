@@ -29,7 +29,7 @@
 				</a>
 			</li>
 		</ul>
-		<small class="font-mono text-[0.7rem] text-[#64748b]">
+		<small class="font-mono text-[0.7rem] text-[#7a8ba0]">
 			© {{ year }} Traceway, Inc.
 		</small>
 	</footer>
