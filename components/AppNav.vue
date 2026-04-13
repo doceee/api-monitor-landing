@@ -30,7 +30,7 @@
 			<li v-for="link in links" :key="link.href">
 				<a
 					:href="link.href"
-					class="group relative py-1 text-[0.8rem] text-[#64748b] no-underline transition-colors duration-200 hover:text-[#e2e8f0]"
+					class="group relative py-1 text-[0.8rem] text-[#94a3b8] no-underline transition-colors duration-200 hover:text-[#e2e8f0]"
 				>
 					{{ link.label }}
 					<span
