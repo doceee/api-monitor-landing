@@ -1,0 +1,340 @@
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-mono-v20-latin_latin-ext-regular.woff2')
+		format('woff2');
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #080c14;
+	color: #e2e8f0;
+	font-family: 'IBM Plex Mono', monospace;
+	overflow-x: hidden;
+}
+
+.page-enter-active,
+.page-leave-active {
+	transition:
+		opacity 0.35s,
+		transform 0.35s;
+}
+.page-enter-from {
+	opacity: 0;
+	transform: translateY(14px);
+}
+.page-leave-to {
+	opacity: 0;
+}
+
+.reveal {
+	opacity: 0;
+	transform: translateY(28px);
+	transition:
+		opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+.reveal-left {
+	opacity: 0;
+	transform: translateX(-32px);
+	transition:
+		opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+.reveal-right {
+	opacity: 0;
+	transform: translateX(32px);
+	transition:
+		opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+.reveal-scale {
+	opacity: 0;
+	transform: scale(0.94);
+	transition:
+		opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.is-visible {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.reveal-d1 {
+	transition-delay: 0.08s;
+}
+.reveal-d2 {
+	transition-delay: 0.16s;
+}
+.reveal-d3 {
+	transition-delay: 0.24s;
+}
+.reveal-d4 {
+	transition-delay: 0.32s;
+}
+.reveal-d5 {
+	transition-delay: 0.4s;
+}
+.reveal-d6 {
+	transition-delay: 0.48s;
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+.card-glow-border {
+	--angle: 0deg;
+	border: 1px solid transparent;
+	background:
+		linear-gradient(#0d1220, #0d1220) padding-box,
+		conic-gradient(from var(--angle), #3b82f6, #818cf8, #22c55e, #3b82f6)
+			border-box;
+	animation: rotateBorder 4s linear infinite;
+}
+@keyframes rotateBorder {
+	to {
+		--angle: 360deg;
+	}
+}
+
+.shimmer-hover {
+	position: relative;
+	overflow: hidden;
+}
+.shimmer-hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 60%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.05),
+		transparent
+	);
+	transition: left 0.5s;
+}
+.shimmer-hover:hover::after {
+	left: 150%;
+}
+
+.metric-flash {
+	animation: tickerFlash 0.4s ease-out;
+}
+@keyframes tickerFlash {
+	0% {
+		color: #fff;
+		transform: scale(1.08);
+	}
+	100% {
+		color: inherit;
+		transform: scale(1);
+	}
+}
+
+.scan-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(59, 130, 246, 0.5),
+		transparent
+	);
+	pointer-events: none;
+	animation: scanDown 3s linear infinite;
+}
+@keyframes scanDown {
+	0% {
+		top: 0;
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 0.7;
+	}
+	100% {
+		top: 100%;
+		opacity: 0;
+	}
+}
+
+.bar-grow {
+	animation: barGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes barGrow {
+	from {
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	to {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
+
+@layer utilities {
+	.hero-grid-bg {
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0.05) 1px,
+				transparent 1px
+			);
+		background-size: 50px 50px;
+		mask-image: radial-gradient(
+			ellipse 80% 80% at 50% 50%,
+			black 40%,
+			transparent 100%
+		);
+	}
+	.text-gradient-blue {
+		background: linear-gradient(
+			135deg,
+			#93c5fd 0%,
+			#3b82f6 50%,
+			#818cf8 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.text-shimmer {
+		background: linear-gradient(
+			90deg,
+			#64748b 0%,
+			#e2e8f0 40%,
+			#64748b 60%,
+			#e2e8f0 100%
+		);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		animation: shimmer 2.5s linear infinite;
+	}
+	.glow-blue-sm {
+		box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+	}
+	.glow-blue-md {
+		box-shadow:
+			0 0 24px rgba(59, 130, 246, 0.35),
+			0 0 60px rgba(59, 130, 246, 0.1);
+	}
+	.glow-green-sm {
+		box-shadow: 0 0 12px rgba(34, 197, 94, 0.25);
+	}
+	.border-subtle {
+		border: 1px solid rgba(255, 255, 255, 0.06);
+	}
+	.border-subtle2 {
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	.stagger-1 {
+		animation-delay: 100ms;
+	}
+	.stagger-2 {
+		animation-delay: 200ms;
+	}
+	.stagger-3 {
+		animation-delay: 300ms;
+	}
+	.stagger-4 {
+		animation-delay: 400ms;
+	}
+	.stagger-5 {
+		animation-delay: 500ms;
+	}
+	.stagger-6 {
+		animation-delay: 600ms;
+	}
+	.stagger-7 {
+		animation-delay: 700ms;
+	}
+	.stagger-8 {
+		animation-delay: 800ms;
+	}
+}
+
+@layer components {
+	.sec-eyebrow {
+		font-family: 'IBM Plex Mono', monospace;
+		font-size: 0.68rem;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		color: #3b82f6;
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+	}
+	.sec-eyebrow::before {
+		content: '';
+		width: 20px;
+		height: 1px;
+		background: #3b82f6;
+		display: block;
+	}
+	.sec-title {
+		font-size: clamp(1.8rem, 4vw, 3rem);
+		font-weight: 600;
+		letter-spacing: -0.03em;
+		color: #fff;
+		line-height: 1.1;
+		margin-bottom: 1rem;
+	}
+	.sec-desc {
+		font-size: 1rem;
+		color: #64748b;
+		line-height: 1.7;
+		max-width: 48ch;
+		font-weight: 300;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-track {
+	background: #080c14;
+}
+::-webkit-scrollbar-thumb {
+	background: #3b82f6;
+	border-radius: 2px;
+}

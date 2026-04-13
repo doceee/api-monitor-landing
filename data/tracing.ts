@@ -1,0 +1,42 @@
+export const spans = [
+	{
+		name: 'gateway.route',
+		color: '#3b82f6',
+		indent: false,
+		width: 100,
+		ms: 847,
+		isBottleneck: false,
+	},
+	{
+		name: 'auth.verify',
+		color: '#22c55e',
+		indent: true,
+		width: 5,
+		ms: 41,
+		isBottleneck: false,
+	},
+	{
+		name: 'db.query',
+		color: '#22c55e',
+		indent: true,
+		width: 18,
+		ms: 149,
+		isBottleneck: false,
+	},
+	{
+		name: 'payment.charge',
+		color: '#f59e0b',
+		indent: true,
+		width: 68,
+		ms: 574,
+		isBottleneck: true,
+	},
+	{
+		name: 'email.send',
+		color: '#22c55e',
+		indent: true,
+		width: 9,
+		ms: 78,
+		isBottleneck: false,
+	},
+];
