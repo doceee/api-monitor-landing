@@ -14,7 +14,7 @@
 			<div class="mt-12 grid items-start gap-20 md:grid-cols-2">
 				<div class="reveal-left">
 					<p
-						class="mb-5 text-base font-light leading-[1.8] text-[#64748b]"
+						class="mb-5 text-base font-light leading-[1.8] text-[#94a3b8]"
 					>
 						Traceway was born out of frustration — we spent more
 						time debugging API issues than building the product. We
@@ -25,7 +25,7 @@
 						.
 					</p>
 					<p
-						class="text-base font-light leading-[1.8] text-[#64748b]"
+						class="text-base font-light leading-[1.8] text-[#94a3b8]"
 					>
 						We're bootstrapped, profitable, and focused on one
 						thing: giving you full visibility into the health of
@@ -53,7 +53,7 @@
 								</span>
 							</div>
 							<div
-								class="mt-1 text-[0.72rem] leading-relaxed text-[#64748b]"
+								class="mt-1 text-[0.72rem] leading-relaxed text-[#94a3b8]"
 							>
 								{{ stat.label }}
 							</div>
@@ -63,7 +63,7 @@
 
 				<div class="reveal-right">
 					<p
-						class="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#64748b]"
+						class="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 					>
 						Team
 					</p>
@@ -87,7 +87,7 @@
 								{{ member.name }}
 							</p>
 							<p
-								class="mt-[2px] font-mono text-[0.64rem] text-[#64748b]"
+								class="mt-[2px] font-mono text-[0.64rem] text-[#94a3b8]"
 							>
 								{{ member.role }}
 							</p>

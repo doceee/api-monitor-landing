@@ -23,7 +23,7 @@
 						:class="
 							cycle === opt.key
 								? 'bg-[#3b82f6] text-white shadow-[0_2px_12px_rgba(59,130,246,0.35)]'
-								: 'bg-transparent text-[#64748b] hover:text-[#e2e8f0]'
+								: 'bg-transparent text-[#94a3b8] hover:text-[#e2e8f0]'
 						"
 						@click="toggle(opt.key as 'monthly' | 'yearly')"
 					>
@@ -58,7 +58,7 @@
 					</div>
 
 					<p
-						class="mb-2 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#64748b]"
+						class="mb-2 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 					>
 						{{ plan.name }}
 					</p>
@@ -77,13 +77,13 @@
 										: plan.priceMonthly
 								}}
 							</span>
-							<span class="text-[0.85rem] text-[#64748b]">
+							<span class="text-[0.85rem] text-[#94a3b8]">
 								/mo
 							</span>
 						</div>
 					</Transition>
 
-					<p class="mb-6 h-4 font-mono text-[0.72rem] text-[#64748b]">
+					<p class="mb-6 h-4 font-mono text-[0.72rem] text-[#94a3b8]">
 						{{
 							cycle === 'yearly'
 								? plan.periodYearly
@@ -100,7 +100,7 @@
 							class="flex items-start gap-2 text-[0.8rem] font-light leading-relaxed"
 							:class="
 								feat.included
-									? 'text-[#64748b]'
+									? 'text-[#94a3b8]'
 									: 'text-[#374151]'
 							"
 						>
@@ -143,7 +143,7 @@
 						{{ item.q }}
 					</p>
 					<p
-						class="text-[0.8rem] font-light leading-relaxed text-[#64748b]"
+						class="text-[0.8rem] font-light leading-relaxed text-[#94a3b8]"
 					>
 						{{ item.a }}
 					</p>

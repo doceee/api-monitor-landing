@@ -34,7 +34,7 @@
 							"
 						/>
 						<p
-							class="mb-1 font-mono text-[0.62rem] text-[#64748b] transition-colors duration-200 group-hover:text-[#3b82f6]"
+							class="mb-1 font-mono text-[0.62rem] text-[#94a3b8] transition-colors duration-200 group-hover:text-[#3b82f6]"
 						>
 							{{ String(i + 1).padStart(2, '0') }}
 						</p>
@@ -49,7 +49,7 @@
 							{{ feat.name }}
 						</p>
 						<p
-							class="text-[0.8rem] font-light leading-relaxed text-[#64748b]"
+							class="text-[0.8rem] font-light leading-relaxed text-[#94a3b8]"
 						>
 							{{ feat.description }}
 						</p>
@@ -79,7 +79,7 @@
 						<transition name="path">
 							<span
 								:key="features[active].path"
-								class="ml-auto font-mono text-[0.62rem] text-[#64748b]"
+								class="ml-auto font-mono text-[0.62rem] text-[#94a3b8]"
 							>
 								{{ features[active].path }}
 							</span>

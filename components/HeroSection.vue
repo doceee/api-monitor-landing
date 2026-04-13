@@ -53,7 +53,7 @@
 		</h1>
 
 		<p
-			class="stagger-3 mx-auto mb-10 max-w-[52ch] animate-fade-up text-[1.05rem] font-light leading-[1.7] text-[#64748b]"
+			class="stagger-3 mx-auto mb-10 max-w-[52ch] animate-fade-up text-[1.05rem] font-light leading-[1.7] text-[#94a3b8]"
 		>
 			Real-time alerting, distributed tracing and uptime monitoring for
 			developer teams. Zero configuration — ready in 3 minutes.
@@ -98,7 +98,7 @@
 				class="flex items-center justify-between border-b border-[rgba(255,255,255,0.06)] px-5 py-3"
 			>
 				<span
-					class="font-mono text-[0.7rem] tracking-[0.08em] text-[#64748b]"
+					class="font-mono text-[0.7rem] tracking-[0.08em] text-[#94a3b8]"
 				>
 					LIVE / DEMO ENVIRONMENT
 				</span>
@@ -122,7 +122,7 @@
 					:style="`animation-delay: ${i * 80}ms`"
 				>
 					<div
-						class="mb-1 font-mono text-[0.65rem] uppercase tracking-[0.06em] text-[#64748b]"
+						class="mb-1 font-mono text-[0.65rem] uppercase tracking-[0.06em] text-[#94a3b8]"
 					>
 						{{ tick.label }}
 					</div>
@@ -134,7 +134,7 @@
 						{{ tick.value }}
 					</div>
 					<div
-						class="mt-[3px] font-mono text-[0.62rem] text-[#64748b]"
+						class="mt-[3px] font-mono text-[0.62rem] text-[#94a3b8]"
 					>
 						{{ tick.sub }}
 					</div>

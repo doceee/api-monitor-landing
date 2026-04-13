@@ -3,7 +3,7 @@
 		class="flex flex-col flex-wrap items-center justify-between gap-4 border-t border-[rgba(255,255,255,0.06)] px-6 py-6 md:flex-row md:px-10"
 	>
 		<div
-			class="group flex cursor-default items-center gap-[10px] text-[0.9rem] font-semibold text-[#64748b]"
+			class="group flex cursor-default items-center gap-[10px] text-[0.9rem] font-semibold text-[#94a3b8]"
 		>
 			<span class="relative flex">
 				<span
@@ -23,13 +23,13 @@
 			<li v-for="link in links" :key="link.label">
 				<a
 					:href="link.href"
-					class="text-[0.75rem] text-[#64748b] no-underline transition-colors duration-200 hover:text-[#e2e8f0]"
+					class="text-[0.75rem] text-[#94a3b8] no-underline transition-colors duration-200 hover:text-[#e2e8f0]"
 				>
 					{{ link.label }}
 				</a>
 			</li>
 		</ul>
-		<small class="font-mono text-[0.7rem] text-[#1e293b]">
+		<small class="font-mono text-[0.7rem] text-[#64748b]">
 			© {{ year }} Traceway, Inc.
 		</small>
 	</footer>

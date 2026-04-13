@@ -12,6 +12,15 @@ export default defineNuxtConfig({
 					content: 'width=device-width, initial-scale=1',
 				},
 			],
+			link: [
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					href: '/fonts/ibm-plex-mono-v20-latin_latin-ext-regular.woff2',
+					crossorigin: 'anonymous',
+				},
+			],
 		},
 		pageTransition: { name: 'page', mode: 'out-in' },
 	},

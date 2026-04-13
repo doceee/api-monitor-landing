@@ -3,7 +3,7 @@
 		class="overflow-hidden border-b border-t border-[rgba(255,255,255,0.06)] px-6 py-10 text-center md:px-10"
 	>
 		<p
-			class="reveal mb-5 text-[0.75rem] uppercase tracking-[0.1em] text-[#64748b]"
+			class="reveal mb-5 text-[0.75rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 		>
 			Trusted by engineering teams at
 		</p>
@@ -11,7 +11,7 @@
 			<span
 				v-for="(logo, i) in logos"
 				:key="logo"
-				class="reveal cursor-default rounded-md border border-[rgba(255,255,255,0.06)] px-3 py-[6px] font-mono text-[0.75rem] tracking-[0.05em] text-[#334155] transition-all duration-300 hover:border-[rgba(255,255,255,0.12)] hover:text-[#64748b]"
+				class="reveal cursor-default rounded-md border border-[rgba(255,255,255,0.06)] px-3 py-[6px] font-mono text-[0.75rem] tracking-[0.05em] text-[#94a3b8] transition-all duration-300 hover:border-[rgba(255,255,255,0.12)] hover:text-[#94a3b8]"
 				:class="`reveal-d${Math.min(i + 1, 6)}`"
 			>
 				{{ logo }}
@@ -55,7 +55,7 @@
 		</h2>
 
 		<p
-			class="reveal reveal-d1 relative z-10 mb-10 text-base font-light text-[#64748b]"
+			class="reveal reveal-d1 relative z-10 mb-10 text-base font-light text-[#94a3b8]"
 		>
 			Join 12,000+ developers who never go to sleep unsure.
 		</p>
