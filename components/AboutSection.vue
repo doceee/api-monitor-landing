@@ -4,15 +4,15 @@
 		class="border-t border-[rgba(255,255,255,0.06)] bg-[#0d1220] px-6 py-24 md:px-10"
 	>
 		<div class="mx-auto max-w-[1100px]">
-			<p class="reveal sec-eyebrow">Company</p>
-			<h2 class="reveal reveal-d1 sec-title">
+			<p v-motion-fade-up class="sec-eyebrow">Company</p>
+			<h2 v-motion-fade-up-1 class="sec-title">
 				Built by developers,
 				<br />
 				for developers.
 			</h2>
 
 			<div class="mt-12 grid items-start gap-20 md:grid-cols-2">
-				<div class="reveal-left">
+				<div v-motion-fade-left>
 					<p
 						class="mb-5 text-base font-light leading-[1.8] text-[#94a3b8]"
 					>
@@ -38,8 +38,10 @@
 						<div
 							v-for="(stat, i) in stats"
 							:key="stat.label"
-							class="reveal-scale group bg-[#111827] px-6 py-5 transition-colors duration-300 hover:bg-[#161f2e]"
-							:class="`reveal-d${i + 1}`"
+							v-motion
+							:initial="{ opacity: 0, scale: 0.94 }"
+							:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: (i + 1) * 80 } }"
+							class="group bg-[#111827] px-6 py-5 transition-colors duration-300 hover:bg-[#161f2e]"
 						>
 							<div
 								class="flex items-baseline gap-[2px] font-mono font-medium tracking-[-0.04em] text-white"
@@ -61,7 +63,7 @@
 					</div>
 				</div>
 
-				<div class="reveal-right">
+				<div v-motion-fade-right>
 					<p
 						class="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 					>
@@ -71,8 +73,10 @@
 						<div
 							v-for="(member, i) in team"
 							:key="member.initials"
-							class="reveal-scale cursor-default rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#111827] p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(59,130,246,0.3)] hover:shadow-[0_8px_24px_rgba(59,130,246,0.08)]"
-							:class="`reveal-d${i + 1}`"
+							v-motion
+							:initial="{ opacity: 0, scale: 0.94 }"
+							:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: (i + 1) * 80 } }"
+							class="cursor-default rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#111827] p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(59,130,246,0.3)] hover:shadow-[0_8px_24px_rgba(59,130,246,0.08)]"
 						>
 							<div
 								class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full text-[0.9rem] font-semibold transition-transform duration-300 hover:scale-105"

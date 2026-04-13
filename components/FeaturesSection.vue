@@ -1,19 +1,19 @@
 <template>
 	<section id="features" class="bg-[#080c14] px-6 py-24 md:px-10">
 		<div class="mx-auto max-w-[1100px]">
-			<p class="reveal sec-eyebrow">Platform</p>
-			<h2 class="reveal reveal-d1 sec-title">
+			<p v-motion-fade-up class="sec-eyebrow">Platform</p>
+			<h2 v-motion-fade-up-1 class="sec-title">
 				Everything you need
 				<br />
 				to own your API health.
 			</h2>
-			<p class="reveal reveal-d2 sec-desc">
+			<p v-motion-fade-up-2 class="sec-desc">
 				From simple uptime checks to full distributed tracing —
 				everything in one place.
 			</p>
 
 			<div class="mt-12 grid items-start gap-16 md:grid-cols-2">
-				<div class="reveal-left flex flex-col gap-2">
+				<div v-motion-fade-left class="flex flex-col gap-2">
 					<div
 						v-for="(feat, i) in features"
 						:key="feat.id"
@@ -57,7 +57,8 @@
 				</div>
 
 				<div
-					class="reveal-right sticky top-20 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] transition-shadow duration-500"
+					v-motion-fade-right
+					class="sticky top-20 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] transition-shadow duration-500"
 					:class="
 						active !== null
 							? 'shadow-[0_0_40px_rgba(59,130,246,0.08)]'

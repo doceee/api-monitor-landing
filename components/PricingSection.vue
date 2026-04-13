@@ -5,16 +5,17 @@
 	>
 		<div class="mx-auto max-w-[1000px]">
 			<div class="text-center">
-				<p class="reveal sec-eyebrow justify-center">Pricing</p>
-				<h2 class="reveal reveal-d1 sec-title">
+				<p v-motion-fade-up class="sec-eyebrow justify-center">Pricing</p>
+				<h2 v-motion-fade-up-1 class="sec-title">
 					Simple, transparent pricing.
 				</h2>
-				<p class="reveal reveal-d2 sec-desc mx-auto">
+				<p v-motion-fade-up-2 class="sec-desc mx-auto">
 					Start for free. Upgrade when you're ready. No hidden costs.
 				</p>
 
 				<div
-					class="reveal reveal-d3 mt-8 inline-flex items-center gap-[6px] rounded-full border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-1"
+					v-motion-fade-up-3
+					class="mt-8 inline-flex items-center gap-[6px] rounded-full border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-1"
 				>
 					<button
 						v-for="opt in billingOpts"
@@ -42,13 +43,15 @@
 				<div
 					v-for="(plan, i) in plans"
 					:key="plan.id"
-					class="reveal-scale shimmer-hover relative cursor-default rounded-2xl p-8 transition-all duration-300"
-					:class="[
+					v-motion
+					:initial="{ opacity: 0, scale: 0.94 }"
+					:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: i * 120 } }"
+					class="shimmer-hover relative cursor-default rounded-2xl p-8 transition-all duration-300"
+					:class="
 						plan.featured
 							? 'border-2 border-[rgba(59,130,246,0.4)] bg-[rgba(59,130,246,0.04)] hover:shadow-[0_0_40px_rgba(59,130,246,0.12)]'
-							: 'border border-[rgba(255,255,255,0.06)] bg-[#0d1220] hover:border-[rgba(59,130,246,0.25)] hover:shadow-[0_0_20px_rgba(59,130,246,0.06)]',
-						`reveal-d${i + 1}`,
-					]"
+							: 'border border-[rgba(255,255,255,0.06)] bg-[#0d1220] hover:border-[rgba(59,130,246,0.25)] hover:shadow-[0_0_20px_rgba(59,130,246,0.06)]'
+					"
 				>
 					<div
 						v-if="plan.featured"
@@ -136,8 +139,10 @@
 				<div
 					v-for="(item, i) in faq"
 					:key="item.q"
-					class="reveal rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-5 transition-colors duration-200 hover:border-[rgba(255,255,255,0.1)]"
-					:class="`reveal-d${i + 1}`"
+					v-motion
+					:initial="{ opacity: 0, y: 28 }"
+					:visible-once="{ opacity: 1, y: 0, transition: { duration: 750, ease: [0.16, 1, 0.3, 1], delay: i * 80 } }"
+					class="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-5 transition-colors duration-200 hover:border-[rgba(255,255,255,0.1)]"
 				>
 					<p class="mb-2 text-[0.875rem] font-medium text-white">
 						{{ item.q }}

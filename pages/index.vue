@@ -22,6 +22,4 @@
 		ogTitle: 'Traceway — Monitor every API.',
 		ogDescription: 'Fix issues before they hit users.',
 	});
-
-	useReveal();
 </script>
