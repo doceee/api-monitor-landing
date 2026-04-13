@@ -4,15 +4,51 @@
 		class="border-t border-[rgba(255,255,255,0.06)] bg-[#0d1220] px-6 py-24 md:px-10"
 	>
 		<div class="mx-auto max-w-[1100px]">
-			<p v-motion-fade-up class="sec-eyebrow">Company</p>
-			<h2 v-motion-fade-up-1 class="sec-title">
+			<p
+				v-motion
+				:initial="{ opacity: 0, y: 28 }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+				}"
+				class="sec-eyebrow"
+			>
+				Company
+			</p>
+			<h2
+				v-motion
+				:initial="{ opacity: 0, y: 28 }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 600,
+						ease: [0.16, 1, 0.3, 1],
+						delay: 100,
+					},
+				}"
+				class="sec-title"
+			>
 				Built by developers,
 				<br />
 				for developers.
 			</h2>
 
 			<div class="mt-12 grid items-start gap-20 md:grid-cols-2">
-				<div v-motion-fade-left>
+				<div
+					v-motion
+					:initial="{ opacity: 0, x: -32 }"
+					:visible="{
+						opacity: 1,
+						x: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 200,
+						},
+					}"
+				>
 					<p
 						class="mb-5 text-base font-light leading-[1.8] text-[#94a3b8]"
 					>
@@ -40,7 +76,15 @@
 							:key="stat.label"
 							v-motion
 							:initial="{ opacity: 0, scale: 0.94 }"
-							:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: (i + 1) * 80 } }"
+							:visible="{
+								opacity: 1,
+								scale: 1,
+								transition: {
+									duration: 600,
+									ease: [0.16, 1, 0.3, 1],
+									delay: (i + 1) * 80,
+								},
+							}"
 							class="group bg-[#111827] px-6 py-5 transition-colors duration-300 hover:bg-[#161f2e]"
 						>
 							<div
@@ -63,7 +107,19 @@
 					</div>
 				</div>
 
-				<div v-motion-fade-right>
+				<div
+					v-motion
+					:initial="{ opacity: 0, x: 32 }"
+					:visible="{
+						opacity: 1,
+						x: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 300,
+						},
+					}"
+				>
 					<p
 						class="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 					>
@@ -75,7 +131,15 @@
 							:key="member.initials"
 							v-motion
 							:initial="{ opacity: 0, scale: 0.94 }"
-							:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: (i + 1) * 80 } }"
+							:visible="{
+								opacity: 1,
+								scale: 1,
+								transition: {
+									duration: 600,
+									ease: [0.16, 1, 0.3, 1],
+									delay: (i + 1) * 80,
+								},
+							}"
 							class="cursor-default rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#111827] p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(59,130,246,0.3)] hover:shadow-[0_8px_24px_rgba(59,130,246,0.08)]"
 						>
 							<div

@@ -5,16 +5,63 @@
 	>
 		<div class="mx-auto max-w-[1000px]">
 			<div class="text-center">
-				<p v-motion-fade-up class="sec-eyebrow justify-center">Pricing</p>
-				<h2 v-motion-fade-up-1 class="sec-title">
+				<p
+					v-motion
+					:initial="{ opacity: 0, y: 28 }"
+					:visible="{
+						opacity: 1,
+						y: 0,
+						transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+					}"
+					class="sec-eyebrow justify-center"
+				>
+					Pricing
+				</p>
+				<h2
+					v-motion
+					:initial="{ opacity: 0, y: 28 }"
+					:visible="{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 100,
+						},
+					}"
+					class="sec-title"
+				>
 					Simple, transparent pricing.
 				</h2>
-				<p v-motion-fade-up-2 class="sec-desc mx-auto">
+				<p
+					v-motion
+					:initial="{ opacity: 0, y: 28 }"
+					:visible="{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 200,
+						},
+					}"
+					class="sec-desc mx-auto"
+				>
 					Start for free. Upgrade when you're ready. No hidden costs.
 				</p>
 
 				<div
-					v-motion-fade-up-3
+					v-motion
+					:initial="{ opacity: 0, y: 28 }"
+					:visible="{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 300,
+						},
+					}"
 					class="mt-8 inline-flex items-center gap-[6px] rounded-full border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-1"
 				>
 					<button
@@ -45,7 +92,15 @@
 					:key="plan.id"
 					v-motion
 					:initial="{ opacity: 0, scale: 0.94 }"
-					:visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, ease: [0.16, 1, 0.3, 1], delay: i * 120 } }"
+					:visible="{
+						opacity: 1,
+						scale: 1,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: i * 120,
+						},
+					}"
 					class="shimmer-hover relative cursor-default rounded-2xl p-8 transition-all duration-300"
 					:class="
 						plan.featured
@@ -141,7 +196,15 @@
 					:key="item.q"
 					v-motion
 					:initial="{ opacity: 0, y: 28 }"
-					:visible-once="{ opacity: 1, y: 0, transition: { duration: 750, ease: [0.16, 1, 0.3, 1], delay: i * 80 } }"
+					:visible="{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 750,
+							ease: [0.16, 1, 0.3, 1],
+							delay: i * 80,
+						},
+					}"
 					class="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] p-5 transition-colors duration-200 hover:border-[rgba(255,255,255,0.1)]"
 				>
 					<p class="mb-2 text-[0.875rem] font-medium text-white">

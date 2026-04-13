@@ -1,19 +1,69 @@
 <template>
 	<section id="features" class="bg-[#080c14] px-6 py-24 md:px-10">
 		<div class="mx-auto max-w-[1100px]">
-			<p v-motion-fade-up class="sec-eyebrow">Platform</p>
-			<h2 v-motion-fade-up-1 class="sec-title">
+			<p
+				v-motion
+				:initial="{ opacity: 0, y: 28 }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+				}"
+				class="sec-eyebrow"
+			>
+				Platform
+			</p>
+			<h2
+				v-motion
+				:initial="{ opacity: 0, y: 28 }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 600,
+						ease: [0.16, 1, 0.3, 1],
+						delay: 100,
+					},
+				}"
+				class="sec-title"
+			>
 				Everything you need
 				<br />
 				to own your API health.
 			</h2>
-			<p v-motion-fade-up-2 class="sec-desc">
+			<p
+				v-motion
+				:initial="{ opacity: 0, y: 28 }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 600,
+						ease: [0.16, 1, 0.3, 1],
+						delay: 200,
+					},
+				}"
+				class="sec-desc"
+			>
 				From simple uptime checks to full distributed tracing —
 				everything in one place.
 			</p>
 
 			<div class="mt-12 grid items-start gap-16 md:grid-cols-2">
-				<div v-motion-fade-left class="flex flex-col gap-2">
+				<div
+					v-motion
+					:initial="{ opacity: 0, x: -32 }"
+					:visible="{
+						opacity: 1,
+						x: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 300,
+						},
+					}"
+					class="flex flex-col gap-2"
+				>
 					<div
 						v-for="(feat, i) in features"
 						:key="feat.id"
@@ -57,7 +107,17 @@
 				</div>
 
 				<div
-					v-motion-fade-right
+					v-motion
+					:initial="{ opacity: 0, x: 32 }"
+					:visible="{
+						opacity: 1,
+						x: 0,
+						transition: {
+							duration: 600,
+							ease: [0.16, 1, 0.3, 1],
+							delay: 400,
+						},
+					}"
 					class="sticky top-20 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#0d1220] transition-shadow duration-500"
 					:class="
 						active !== null

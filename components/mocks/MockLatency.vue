@@ -23,7 +23,6 @@
 						/>
 					</linearGradient>
 				</defs>
-				<!-- Grid lines -->
 				<line
 					v-for="y in [40, 80, 120]"
 					:key="y"

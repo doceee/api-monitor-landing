@@ -2,7 +2,11 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const fadeUp = (delay = 0) => ({
 	initial: { opacity: 0, y: 28 },
-	visibleOnce: { opacity: 1, y: 0, transition: { duration: 750, ease, delay } },
+	visibleOnce: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 750, ease, delay },
+	},
 });
 
 const scaleIn = (delay = 0) => ({
@@ -16,7 +20,12 @@ const scaleIn = (delay = 0) => ({
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/eslint', '@vueuse/motion/nuxt'],
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'@vueuse/nuxt',
+		'@nuxt/eslint',
+		'@vueuse/motion/nuxt',
+	],
 
 	motion: {
 		directives: {
@@ -29,11 +38,19 @@ export default defineNuxtConfig({
 			'fade-up-6': fadeUp(480),
 			'fade-left': {
 				initial: { opacity: 0, x: -32 },
-				visibleOnce: { opacity: 1, x: 0, transition: { duration: 750, ease } },
+				visibleOnce: {
+					opacity: 1,
+					x: 0,
+					transition: { duration: 750, ease },
+				},
 			},
 			'fade-right': {
 				initial: { opacity: 0, x: 32 },
-				visibleOnce: { opacity: 1, x: 0, transition: { duration: 750, ease } },
+				visibleOnce: {
+					opacity: 1,
+					x: 0,
+					transition: { duration: 750, ease },
+				},
 			},
 			'scale-in': scaleIn(),
 			'scale-in-1': scaleIn(80),

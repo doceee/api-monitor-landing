@@ -12,7 +12,7 @@
 			<div
 				v-for="(ep, ei) in endpoints"
 				:key="ep.name"
-				class="flex animate-count-up items-center gap-3 text-[0.75rem]"
+				class="flex translate-y-3 animate-count-up items-center gap-3 text-[0.75rem] opacity-0"
 				:style="`animation-delay: ${ei * 60}ms`"
 			>
 				<span

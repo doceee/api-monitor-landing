@@ -18,7 +18,6 @@
 				<span class="text-[0.62rem] text-[#64748b]">
 					{{ alert.time }}
 				</span>
-				<!-- severity badge -->
 				<span
 					class="rounded px-[6px] py-[2px] font-mono text-[0.55rem]"
 					:style="{

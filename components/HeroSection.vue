@@ -118,7 +118,7 @@
 				<div
 					v-for="(tick, i) in ticks"
 					:key="tick.label"
-					class="animate-count-up px-5 py-4"
+					class="translate-y-3 animate-count-up px-5 py-4 opacity-0"
 					:style="`animation-delay: ${i * 80}ms`"
 				>
 					<div

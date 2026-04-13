@@ -3,7 +3,13 @@
 		class="overflow-hidden border-b border-t border-[rgba(255,255,255,0.06)] px-6 py-10 text-center md:px-10"
 	>
 		<p
-			v-motion-fade-up
+			v-motion
+			:initial="{ opacity: 0, y: 28 }"
+			:visible="{
+				opacity: 1,
+				y: 0,
+				transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+			}"
 			class="mb-5 text-[0.75rem] uppercase tracking-[0.1em] text-[#94a3b8]"
 		>
 			Trusted by engineering teams at
@@ -14,7 +20,15 @@
 				:key="logo"
 				v-motion
 				:initial="{ opacity: 0, y: 28 }"
-				:visible-once="{ opacity: 1, y: 0, transition: { duration: 750, ease: [0.16, 1, 0.3, 1], delay: i * 60 } }"
+				:visible="{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 750,
+						ease: [0.16, 1, 0.3, 1],
+						delay: i * 60,
+					},
+				}"
 				class="cursor-default rounded-md border border-[rgba(255,255,255,0.06)] px-3 py-[6px] font-mono text-[0.75rem] tracking-[0.05em] text-[#94a3b8] transition-all duration-300 hover:border-[rgba(255,255,255,0.12)] hover:text-[#94a3b8]"
 			>
 				{{ logo }}
@@ -51,7 +65,13 @@
 		</div>
 
 		<h2
-			v-motion-fade-up
+			v-motion
+			:initial="{ opacity: 0, y: 28 }"
+			:visible="{
+				opacity: 1,
+				y: 0,
+				transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+			}"
 			class="relative z-10 mb-4 font-semibold leading-[1.1] tracking-[-0.03em] text-white"
 			style="font-size: clamp(1.8rem, 4vw, 3.2rem)"
 		>
@@ -59,14 +79,34 @@
 		</h2>
 
 		<p
-			v-motion-fade-up-1
+			v-motion
+			:initial="{ opacity: 0, y: 28 }"
+			:visible="{
+				opacity: 1,
+				y: 0,
+				transition: {
+					duration: 600,
+					ease: [0.16, 1, 0.3, 1],
+					delay: 100,
+				},
+			}"
 			class="relative z-10 mb-10 text-base font-light text-[#94a3b8]"
 		>
 			Join 12,000+ developers who never go to sleep unsure.
 		</p>
 
 		<div
-			v-motion-fade-up-2
+			v-motion
+			:initial="{ opacity: 0, y: 28 }"
+			:visible="{
+				opacity: 1,
+				y: 0,
+				transition: {
+					duration: 600,
+					ease: [0.16, 1, 0.3, 1],
+					delay: 200,
+				},
+			}"
 			class="relative z-10 flex flex-wrap justify-center gap-4"
 		>
 			<a
